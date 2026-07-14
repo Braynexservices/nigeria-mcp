@@ -1,0 +1,29 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.Braynexservices/nigeria-trade-intel",
+  "description": "Nigeria import/export stats (UN Comtrade, keyless) + HS-code classification, annual or monthly.",
+  "repository": {
+    "url": "https://github.com/Braynexservices/nigeria-mcp",
+    "source": "github"
+  },
+  "version": "0.3.6",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "@braynexservices/nigeria-mcp-trade-intel",
+      "version": "0.3.6",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "TRADE_PROVIDER",
+          "description": "Provider selector — \"mock\" (default, offline fixtures) or \"opendata\" for live data (keyless UN Comtrade).",
+          "format": "string",
+          "isRequired": false,
+          "isSecret": false
+        }
+      ]
+    }
+  ]
+}

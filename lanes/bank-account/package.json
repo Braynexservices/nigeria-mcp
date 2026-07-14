@@ -1,0 +1,60 @@
+{
+  "name": "@braynexservices/nigeria-mcp-bank-account",
+  "displayName": "Nigeria Bank Resolve MCP",
+  "version": "0.2.6",
+  "description": "Nigeria Bank Resolve MCP — resolve a NUBAN + bank code to the account name, and list banks (Paystack, free), as MCP tools.",
+  "homepage": "https://www.braynexservices.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/braynexservices/nigeria-mcp.git",
+    "directory": "lanes/bank-account"
+  },
+  "bugs": {
+    "url": "https://github.com/braynexservices/nigeria-mcp/issues"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "nigeria",
+    "bank",
+    "nuban",
+    "paystack",
+    "account-resolution"
+  ],
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "NOTICE"
+  ],
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "prepack": "tsc",
+    "start:stdio": "tsx src/stdio.ts",
+    "smoke": "tsx scripts/smoke.ts",
+    "smoke:live": "tsx scripts/live.ts"
+  },
+  "dependencies": {
+    "@braynexservices/nigeria-mcp-core": "^0.3.0",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0"
+  },
+  "license": "MIT",
+  "author": "Samuel Orie <braynexservices@gmail.com> (Braynex Services Ltd — https://www.braynexservices.com)",
+  "engines": {
+    "node": ">=20"
+  },
+  "bin": {
+    "nigeria-mcp-bank-account": "./dist/stdio.js"
+  },
+  "mcpName": "io.github.Braynexservices/nigeria-bank-resolve"
+}

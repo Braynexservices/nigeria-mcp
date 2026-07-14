@@ -1,0 +1,38 @@
+Nigeria MCP — NOTICE (Copyright, Authorship & Ownership)
+========================================================
+
+Copyright © 2026 Braynex Services Ltd. All rights reserved.
+
+Author & Founder:  Samuel Orie
+Company / Owner:    Braynex Services Ltd  (https://www.braynexservices.com)
+Contact:           braynexservices@gmail.com
+
+This repository and the MCP servers, tools, schemas, and supporting code within it
+(collectively, "the Software") are original works authored by Samuel Orie and owned by
+Braynex Services Ltd as company assets. They were independently conceived and built by the
+author; they are not copied from, and are not knowingly derived from, any third party's
+proprietary source code.
+
+Third-party data sources accessed at runtime (e.g. UN Comtrade, open.er-api.com) remain
+the property of their respective providers and are used under their own public terms; this
+notice covers only Braynex Services Ltd' own original code in this repository.
+
+LICENSING
+---------
+This software is released under the **MIT License** (see the LICENSE file at the repository
+root; each package also declares `"license": "MIT"`). Chosen deliberately for broad adoption.
+
+Braynex Services Ltd **retains the copyright** to all original code herein — MIT grants others a
+license to use/modify/redistribute it (with attribution and this notice preserved), but does
+NOT transfer ownership or trademark rights. The "Braynex Services Ltd" brand and product names
+are not licensed for others' use under MIT.
+
+TRADEMARKS
+----------
+"Braynex Services Ltd" and the product names used herein (including
+"Nigeria Trade Intel MCP") are unregistered trademarks / brands of Braynex Services Ltd.
+
+PROVENANCE
+----------
+Authorship and creation dates are evidenced by this repository's git history. This file
+records ownership; it is not a substitute for formal IP registration or legal advice.

@@ -1,0 +1,35 @@
+name: Publish to npm
+
+# Publishes ONE workspace package with Sigstore provenance.
+# Requires the NPM_TOKEN repo secret (npm automation token) — or configure
+# npm Trusted Publishing for each package and drop the token entirely.
+
+on:
+  workflow_dispatch:
+    inputs:
+      workspace:
+        description: "Package to publish (e.g. @braynexservices/nigeria-mcp-core)"
+        required: true
+        type: string
+
+permissions:
+  contents: read
+  id-token: write # required for --provenance
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          registry-url: https://registry.npmjs.org
+      - run: npm ci
+      - run: npm run verify
+      # WORKSPACE via env (not inline interpolation) to avoid command injection.
+      - run: npm publish --provenance --access public -w "$WORKSPACE"
+        env:
+          WORKSPACE: ${{ inputs.workspace }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

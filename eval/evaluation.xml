@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Nigeria MCP — v1 evaluation (mock provider).
+  Deterministic cases across every lane, run by eval/run.ts
+  against a single in-memory server holding all tools. Expectations derive from the mock
+  fixtures; run.ts is the executable source of truth — keep these in sync.
+  Each <expect path="..."> reads structuredContent (dot paths, numeric indices, .length).
+-->
+<evaluation name="nigeria-mcp v1 (mock)" provider="mock">
+
+  <case id="bank-resolve-gtb">
+    <prompt>Resolve bank account 0123456789 at bank code 058.</prompt>
+    <tool>resolve_bank_account</tool>
+    <args>{"account_number":"0123456789","bank_code":"058"}</args>
+    <expect path="accountName">ADAEZE OKONKWO</expect>
+    <expect path="bankName">Guaranty Trust Bank</expect>
+    <expect path="source">mock</expect>
+  </case>
+
+  <case id="bank-resolve-zenith">
+    <prompt>Resolve account 2345678901 at bank code 057.</prompt>
+    <tool>resolve_bank_account</tool>
+    <args>{"account_number":"2345678901","bank_code":"057"}</args>
+    <expect path="accountName">PALMVIEW LOGISTICS LIMITED</expect>
+  </case>
+
+  <case id="bank-list">
+    <prompt>List the supported Nigerian banks.</prompt>
+    <tool>list_banks</tool>
+    <args>{}</args>
+    <expect path="banks.length">6</expect>
+  </case>
+
+  <case id="fx-usd">
+    <prompt>Get NGN/USD exchange rates.</prompt>
+    <tool>get_fx_rates</tool>
+    <args>{"quote":"USD"}</args>
+    <expect path="rates.length">2</expect>
+    <expect path="rates.0.market">official</expect>
+    <expect path="rates.0.rate">1550</expect>
+  </case>
+
+  <case id="fx-all">
+    <prompt>Get all Naira FX rates.</prompt>
+    <tool>get_fx_rates</tool>
+    <args>{}</args>
+    <expect path="rates.length">6</expect>
+  </case>
+
+  <case id="meter-validate">
+    <prompt>Validate prepaid meter 45010101010 on EKEDC.</prompt>
+    <tool>validate_meter</tool>
+    <args>{"meter_number":"45010101010","disco":"EKEDC","meter_type":"prepaid"}</args>
+    <expect path="customerName">ADAEZE OKONKWO</expect>
+    <expect path="disco">EKEDC</expect>
+    <expect path="source">mock</expect>
+  </case>
+
+  <case id="disco-list">
+    <prompt>List the supported Nigerian electricity DisCos.</prompt>
+    <tool>list_discos</tool>
+    <args>{}</args>
+    <expect path="discos.length">6</expect>
+  </case>
+
+  <case id="trade-exports">
+    <prompt>Show Nigeria's export trade flows.</prompt>
+    <tool>get_trade_stats</tool>
+    <args>{"flow":"export"}</args>
+    <expect path="flows.length">3</expect>
+    <expect path="flows.0.flow">export</expect>
+  </case>
+
+  <case id="hs-classify">
+    <prompt>What HS code is crude oil?</prompt>
+    <tool>classify_hs</tool>
+    <args>{"product_description":"crude oil"}</args>
+    <expect path="hsCode">2709</expect>
+    <expect path="source">mock</expect>
+  </case>
+
+</evaluation>

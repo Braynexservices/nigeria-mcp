@@ -1,0 +1,57 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.Braynexservices/nigeria-electricity",
+  "description": "Read-only Nigerian electricity meter validation + DisCo list via VTpass (free keys). No payments.",
+  "repository": {
+    "url": "https://github.com/Braynexservices/nigeria-mcp",
+    "source": "github"
+  },
+  "version": "0.2.6",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "@braynexservices/nigeria-mcp-electricity",
+      "version": "0.2.6",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "ELECTRICITY_PROVIDER",
+          "description": "Provider selector — \"mock\" (default, offline fixtures) or \"vtpass\" for live data.",
+          "format": "string",
+          "isRequired": false,
+          "isSecret": false
+        },
+        {
+          "name": "VTPASS_API_KEY",
+          "description": "VTpass API key — required when ELECTRICITY_PROVIDER=vtpass.",
+          "format": "string",
+          "isRequired": false,
+          "isSecret": true
+        },
+        {
+          "name": "VTPASS_PUBLIC_KEY",
+          "description": "VTpass public key (PK_...) — required when ELECTRICITY_PROVIDER=vtpass.",
+          "format": "string",
+          "isRequired": false,
+          "isSecret": false
+        },
+        {
+          "name": "VTPASS_SECRET_KEY",
+          "description": "VTpass secret key (SK_...) — required when ELECTRICITY_PROVIDER=vtpass.",
+          "format": "string",
+          "isRequired": false,
+          "isSecret": true
+        },
+        {
+          "name": "VTPASS_BASE_URL",
+          "description": "Set to https://vtpass.com/api for production (default is the VTpass sandbox).",
+          "format": "string",
+          "isRequired": false,
+          "isSecret": false
+        }
+      ]
+    }
+  ]
+}

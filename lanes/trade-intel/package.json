@@ -1,0 +1,61 @@
+{
+  "name": "@braynexservices/nigeria-mcp-trade-intel",
+  "displayName": "Nigeria Trade Intel MCP",
+  "version": "0.3.6",
+  "description": "Nigeria Trade Intel MCP — Nigeria import/export trade statistics (UN Comtrade, free/keyless) + HS-code classification, exposed as MCP tools.",
+  "author": "Samuel Orie <braynexservices@gmail.com> (Braynex Services Ltd — https://www.braynexservices.com)",
+  "homepage": "https://www.braynexservices.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/braynexservices/nigeria-mcp.git",
+    "directory": "lanes/trade-intel"
+  },
+  "bugs": {
+    "url": "https://github.com/braynexservices/nigeria-mcp/issues"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "nigeria",
+    "trade",
+    "comtrade",
+    "hs-code",
+    "trade-statistics",
+    "import-export"
+  ],
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "NOTICE"
+  ],
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "prepack": "tsc",
+    "start:stdio": "tsx src/stdio.ts",
+    "smoke": "tsx scripts/smoke.ts",
+    "smoke:live": "tsx scripts/live.ts"
+  },
+  "dependencies": {
+    "@braynexservices/nigeria-mcp-core": "^0.3.0",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "bin": {
+    "nigeria-mcp-trade-intel": "./dist/stdio.js"
+  },
+  "mcpName": "io.github.Braynexservices/nigeria-trade-intel"
+}

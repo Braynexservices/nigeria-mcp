@@ -1,0 +1,61 @@
+{
+  "name": "@braynexservices/nigeria-mcp-electricity",
+  "displayName": "Nigeria Electricity Meter MCP",
+  "version": "0.2.6",
+  "description": "Nigeria Electricity Meter MCP — READ-ONLY meter validation (customer name/address + DisCo) and DisCo listing via VTpass, as MCP tools. No payments.",
+  "homepage": "https://www.braynexservices.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/braynexservices/nigeria-mcp.git",
+    "directory": "lanes/electricity"
+  },
+  "bugs": {
+    "url": "https://github.com/braynexservices/nigeria-mcp/issues"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "nigeria",
+    "electricity",
+    "meter",
+    "vtpass",
+    "disco",
+    "kyc"
+  ],
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "NOTICE"
+  ],
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "prepack": "tsc",
+    "start:stdio": "tsx src/stdio.ts",
+    "smoke": "tsx scripts/smoke.ts",
+    "smoke:live": "tsx scripts/live.ts"
+  },
+  "dependencies": {
+    "@braynexservices/nigeria-mcp-core": "^0.3.0",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0"
+  },
+  "license": "MIT",
+  "author": "Samuel Orie <braynexservices@gmail.com> (Braynex Services Ltd — https://www.braynexservices.com)",
+  "engines": {
+    "node": ">=20"
+  },
+  "bin": {
+    "nigeria-mcp-electricity": "./dist/stdio.js"
+  },
+  "mcpName": "io.github.Braynexservices/nigeria-electricity"
+}

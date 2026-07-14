@@ -1,0 +1,36 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.Braynexservices/nigeria-bank-resolve",
+  "description": "Resolve a Nigerian NUBAN + bank code to the account name (Paystack, free key). PII never cached.",
+  "repository": {
+    "url": "https://github.com/Braynexservices/nigeria-mcp",
+    "source": "github"
+  },
+  "version": "0.2.6",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "@braynexservices/nigeria-mcp-bank-account",
+      "version": "0.2.6",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "BANK_PROVIDER",
+          "description": "Provider selector — \"mock\" (default, offline fixtures) or \"paystack\" for live data.",
+          "format": "string",
+          "isRequired": false,
+          "isSecret": false
+        },
+        {
+          "name": "PAYSTACK_SECRET_KEY",
+          "description": "Paystack secret key (free at paystack.com) — required when BANK_PROVIDER=paystack.",
+          "format": "string",
+          "isRequired": false,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}
