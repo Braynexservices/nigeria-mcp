@@ -25,7 +25,13 @@ Clean, normalized **Nigerian business & local data** exposed to AI agents (Claud
 Each server's README has full tool docs, examples and a copy-paste config: see `lanes/<server>/README.md`.
 Real-world applications: **[USE_CASES.md](USE_CASES.md)**.
 
-## Install — Claude Desktop / Code
+## Install
+
+### One click (Claude Desktop)
+
+Download a bundle from the [latest release](https://github.com/Braynexservices/nigeria-mcp/releases/latest) and double-click it. No terminal, no clone — the bundle carries everything it needs, and the keyed servers prompt you for the free API key during install (leave it blank to run on offline mock data).
+
+### Or via npx (any MCP client)
 
 No clone needed (Node.js ≥ 20). Add to your MCP config:
 
