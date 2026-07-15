@@ -56,16 +56,12 @@ Then ask: *"What were Nigeria's top crude-oil export partners in 2023?"* or *"Wh
 
 The keyed servers take their credentials the same way — see [`lanes/bank-account/README.md`](lanes/bank-account/README.md) (free [Paystack](https://paystack.com) key) and [`lanes/electricity/README.md`](lanes/electricity/README.md) (free [VTpass](https://vtpass.com) keys). Omit the env block entirely and every server runs on offline mock data.
 
-## MCP Registry
+## Find it on
 
-Listed on the official registry as:
-
-```
-io.github.Braynexservices/nigeria-trade-intel
-io.github.Braynexservices/nigeria-fx-rates
-io.github.Braynexservices/nigeria-bank-resolve
-io.github.Braynexservices/nigeria-electricity
-```
+- **Official MCP Registry** — `io.github.Braynexservices/nigeria-{trade-intel,fx-rates,bank-resolve,electricity}`
+- **Smithery** — [@braynexservices/nigeria-fx-rates](https://smithery.ai/server/@braynexservices/nigeria-fx-rates) · [trade-intel](https://smithery.ai/server/@braynexservices/nigeria-trade-intel) · [bank-resolve](https://smithery.ai/server/@braynexservices/nigeria-bank-resolve) · [electricity](https://smithery.ai/server/@braynexservices/nigeria-electricity)
+- **Glama** — [glama.ai/mcp/servers/Braynexservices/nigeria-mcp](https://glama.ai/mcp/servers/Braynexservices/nigeria-mcp)
+- **npm** — [@braynexservices](https://www.npmjs.com/settings/braynexservices/packages)
 
 ## Build from source
 
