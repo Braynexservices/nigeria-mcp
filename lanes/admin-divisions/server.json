@@ -1,0 +1,20 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.Braynexservices/nigeria-admin-divisions",
+  "description": "Nigeria's 36 states + FCT and 774 LGAs — list states, get LGAs. Fully offline, no key.",
+  "repository": {
+    "url": "https://github.com/Braynexservices/nigeria-mcp",
+    "source": "github"
+  },
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "@braynexservices/nigeria-mcp-admin-divisions",
+      "version": "0.1.0",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.Braynexservices/nigeria-health-facility",
+  "description": "Find Nigerian health facilities near a point, sorted by distance. GRID3, keyless.",
+  "repository": {
+    "url": "https://github.com/Braynexservices/nigeria-mcp",
+    "source": "github"
+  },
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "@braynexservices/nigeria-mcp-health-facility",
+      "version": "0.1.0",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "HEALTH_PROVIDER",
+          "description": "Provider selector — \"mock\" (default, offline) or \"grid3\" for live data (keyless).",
+          "format": "string",
+          "isRequired": false,
+          "isSecret": false
+        }
+      ]
+    }
+  ]
+}

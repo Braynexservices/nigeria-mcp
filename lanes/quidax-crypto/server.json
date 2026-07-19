@@ -1,0 +1,29 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.Braynexservices/nigeria-quidax-crypto",
+  "description": "Live crypto tickers in Naira (BTC/NGN etc.) from Quidax. Read-only, keyless, no trading.",
+  "repository": {
+    "url": "https://github.com/Braynexservices/nigeria-mcp",
+    "source": "github"
+  },
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "@braynexservices/nigeria-mcp-quidax-crypto",
+      "version": "0.1.0",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "CRYPTO_PROVIDER",
+          "description": "Provider selector — \"mock\" (default, offline synthetic) or \"quidax\" for live data (keyless).",
+          "format": "string",
+          "isRequired": false,
+          "isSecret": false
+        }
+      ]
+    }
+  ]
+}
