@@ -1,7 +1,7 @@
 {
   "name": "@braynexservices/nigeria-mcp-admin-divisions",
   "displayName": "Nigeria Admin Divisions MCP",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Nigeria's 36 states + FCT and 774 LGAs as MCP tools — list states with LGA counts, and get an LGA breakdown for any state. Fully offline bundled dataset; no network, no key.",
   "homepage": "https://www.braynexservices.com",
   "repository": {

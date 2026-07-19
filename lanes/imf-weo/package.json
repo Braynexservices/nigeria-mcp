@@ -1,7 +1,7 @@
 {
   "name": "@braynexservices/nigeria-mcp-imf-weo",
   "displayName": "Nigeria IMF WEO MCP",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "IMF World Economic Outlook series for Nigeria (GDP growth, inflation, government debt, current account, unemployment) — history plus projections — as MCP tools. Backed by the IMF DataMapper API, keyless.",
   "homepage": "https://www.braynexservices.com",
   "repository": {

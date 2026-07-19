@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 /**
  * Crypto lane stdio entrypoint — adds Quidax market-data tools to Claude Code / Desktop.
  * Provider is chosen by CRYPTO_PROVIDER (default "mock").

@@ -1,7 +1,7 @@
 {
   "name": "@braynexservices/nigeria-mcp-quidax-crypto",
   "displayName": "Nigeria Quidax Crypto MCP",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Live crypto tickers in Naira (BTC/NGN, ETH/NGN, USDT/NGN, and more) from the Nigerian exchange Quidax, as read-only MCP tools. Public market data, keyless, no trading.",
   "homepage": "https://www.braynexservices.com",
   "repository": {

@@ -1,7 +1,7 @@
 {
   "name": "@braynexservices/nigeria-mcp-health-facility",
   "displayName": "Nigeria Health Facility MCP",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Find Nigerian health facilities (hospitals, clinics, PHCs) near a WGS84 point, sorted by distance, as MCP tools. Backed by GRID3 NGA Health Facilities v2.0 (CC BY 4.0), keyless.",
   "homepage": "https://www.braynexservices.com",
   "repository": {

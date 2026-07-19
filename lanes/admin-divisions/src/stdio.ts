@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 /**
  * Admin-divisions lane stdio entrypoint — adds states/LGAs tools to Claude Code / Desktop.
  * Provider is chosen by ADMIN_DIVISIONS_PROVIDER (default "static"; the lane is offline).

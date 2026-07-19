@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 /**
  * Sanctions lane stdio entrypoint — adds the screening tool to Claude Code / Desktop.
  * Provider is chosen by SANCTIONS_PROVIDER (default "nigsac" — the live register; set

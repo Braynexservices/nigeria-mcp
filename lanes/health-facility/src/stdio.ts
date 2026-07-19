@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 /**
  * Health-facility lane stdio entrypoint — adds facility-lookup tools to Claude Code /
  * Desktop. Provider is chosen by HEALTH_PROVIDER (default "mock").

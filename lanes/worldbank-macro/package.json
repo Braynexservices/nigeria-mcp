@@ -1,7 +1,7 @@
 {
   "name": "@braynexservices/nigeria-mcp-worldbank-macro",
   "displayName": "Nigeria World Bank Macro MCP",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Nigerian macroeconomic indicators (GDP, inflation, population, remittances, FDI, unemployment) as MCP tools. Backed by the World Bank Indicators API, keyless.",
   "homepage": "https://www.braynexservices.com",
   "repository": {

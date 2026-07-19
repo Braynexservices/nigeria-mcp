@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 /**
  * IMF WEO lane stdio entrypoint — adds Nigeria macro-series tools to Claude Code / Desktop.
  * Provider is chosen by IMF_PROVIDER (default "mock").

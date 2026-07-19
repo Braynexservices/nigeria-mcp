@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 /**
  * Boundaries lane stdio entrypoint — adds boundary + reverse-geocode tools to Claude
  * Code / Desktop. Provider is chosen by BOUNDARY_PROVIDER (default "mock").

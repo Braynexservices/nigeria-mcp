@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 /**
  * Macro lane stdio entrypoint — adds World Bank macro tools to Claude Code / Desktop.
  * Provider is chosen by MACRO_PROVIDER (default "mock"; "worldbank" is live + keyless).

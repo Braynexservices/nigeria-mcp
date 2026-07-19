@@ -1,7 +1,7 @@
 {
   "name": "@braynexservices/nigeria-mcp-grid3-boundaries",
   "displayName": "Nigeria GRID3 Boundaries MCP",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Nigeria administrative boundaries (state / LGA / ward) as MCP tools — centroid, bounding box, and reverse-geocoding a WGS84 point to its admin areas. Backed by GRID3 (CC BY 4.0), keyless.",
   "homepage": "https://www.braynexservices.com",
   "repository": {

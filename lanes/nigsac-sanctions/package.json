@@ -1,7 +1,7 @@
 {
   "name": "@braynexservices/nigeria-mcp-nigsac-sanctions",
   "displayName": "Nigeria NIGSAC Sanctions MCP",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Screen a person or company name against Nigeria's official NIGSAC sanctions register as an MCP tool — a best-effort, diacritic-folded, transliteration-tolerant screening signal for human review. Live register, keyless.",
   "homepage": "https://www.braynexservices.com",
   "repository": {

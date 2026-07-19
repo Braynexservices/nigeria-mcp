@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 /**
  * UN SDG lane stdio entrypoint — adds the SDG indicator tool to Claude Code / Desktop.
  * Provider is chosen by SDG_PROVIDER (default "mock").
