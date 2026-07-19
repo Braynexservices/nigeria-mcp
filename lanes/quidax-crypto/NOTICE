@@ -1,0 +1,34 @@
+Nigeria Quidax Crypto MCP — NOTICE (Copyright, Authorship & Ownership)
+=====================================================================
+
+Copyright © 2026 Braynex Services Ltd. All rights reserved.
+
+Author & Founder:  Samuel Orie
+Company / Owner:    Braynex Services Ltd  (https://www.braynexservices.com)
+Contact:           braynexservices@gmail.com
+
+This package and the MCP server, tools, schemas, and supporting code within it (collectively,
+"the Software") are original works authored by Samuel Orie and owned by Braynex Services Ltd as
+company assets. They were independently conceived and built by the author; they are not copied
+from, and are not knowingly derived from, any third party's proprietary source code.
+
+DATA SOURCE
+-----------
+Market data is retrieved at runtime from Quidax's public market-data API and remains the property of Quidax under its own terms of use. This package is read-only and performs no trading; prices are informational, not trading advice.
+
+LICENSING
+---------
+This software is released under the MIT License (see the LICENSE file; the package also declares
+"license": "MIT"). Braynex Services Ltd retains the copyright to all original code herein — MIT
+grants others a license to use/modify/redistribute it (with attribution and this notice
+preserved), but does NOT transfer ownership or trademark rights.
+
+TRADEMARKS
+----------
+"Braynex Services Ltd" and the product name "Nigeria Quidax Crypto MCP" are unregistered trademarks / brands
+of Braynex Services Ltd, not licensed for others' use under MIT.
+
+PROVENANCE
+----------
+Authorship and creation dates are evidenced by this repository's git history. This file records
+ownership; it is not a substitute for formal IP registration or legal advice.

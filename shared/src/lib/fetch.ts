@@ -19,15 +19,54 @@ export interface FetchJsonOptions {
   timeoutMs?: number;
   /** Backoff (ms) before each attempt; first entry is usually 0. Default [0, 600, 1500]. */
   backoffsMs?: number[];
+  /** Hard cap on the response body we will buffer, in bytes. Default 8 MiB. */
+  maxBytes?: number;
 }
 
 export interface FetchJsonResult {
   res: Response;
-  /** Parsed JSON body, or null if the response was not valid JSON. */
+  /** Parsed JSON body, or null if the response was not valid JSON or exceeded maxBytes. */
   body: unknown;
 }
 
 const sleep = (ms: number): Promise<void> => new Promise((r) => setTimeout(r, ms));
+
+const DEFAULT_MAX_BYTES = 8 * 1024 * 1024; // 8 MiB — every provider we hit returns far less.
+
+/**
+ * Read a response body with a hard byte ceiling so a compromised/misbehaving upstream can't
+ * exhaust memory (res.json() buffers unboundedly). Returns the decoded text, or null if the
+ * body is absent or exceeds the cap — the caller then treats null as an unparseable body,
+ * i.e. fails closed rather than trusting a truncated payload.
+ */
+async function readCapped(res: Response, maxBytes: number): Promise<string | null> {
+  const declared = Number(res.headers.get("content-length"));
+  if (Number.isFinite(declared) && declared > maxBytes) return null; // reject early when advertised
+  if (!res.body) {
+    const text = await res.text();
+    return text.length > maxBytes ? null : text;
+  }
+  const reader = res.body.getReader();
+  const chunks: Uint8Array[] = [];
+  let total = 0;
+  for (;;) {
+    const { done, value } = await reader.read();
+    if (done) break;
+    total += value.byteLength;
+    if (total > maxBytes) {
+      await reader.cancel();
+      return null;
+    }
+    chunks.push(value);
+  }
+  const merged = new Uint8Array(total);
+  let offset = 0;
+  for (const c of chunks) {
+    merged.set(c, offset);
+    offset += c.byteLength;
+  }
+  return new TextDecoder().decode(merged);
+}
 
 export async function fetchJson(
   url: string,
@@ -36,6 +75,7 @@ export async function fetchJson(
 ): Promise<FetchJsonResult> {
   const timeoutMs = opts.timeoutMs ?? 15_000;
   const backoffs = opts.backoffsMs ?? [0, 600, 1500];
+  const maxBytes = opts.maxBytes ?? DEFAULT_MAX_BYTES;
 
   let lastError: ToolError | null = null;
   for (const backoff of backoffs) {
@@ -59,7 +99,15 @@ export async function fetchJson(
       );
       continue;
     }
-    const body = await res.json().catch(() => null);
+    const text = await readCapped(res, maxBytes).catch(() => null);
+    let body: unknown = null;
+    if (text !== null && text !== "") {
+      try {
+        body = JSON.parse(text);
+      } catch {
+        body = null;
+      }
+    }
     return { res, body };
   }
   throw (

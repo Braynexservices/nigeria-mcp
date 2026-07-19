@@ -2,7 +2,7 @@
   "name": "nigeria-mcp",
   "version": "0.0.0",
   "private": true,
-  "description": "Nigerian data for AI agents \u2014 MCP servers for trade statistics, FX rates, bank-account resolve, and electricity meter validation. A Braynex Services Ltd product.",
+  "description": "Nigerian data for AI agents \u2014 MCP servers for trade statistics, FX rates, bank-account resolve, electricity meter validation, administrative boundaries, states & LGAs, health facilities, World Bank / IMF / UN-SDG indicators, crypto tickers, and sanctions screening. A Braynex Services Ltd product.",
   "author": "Samuel Orie <braynexservices@gmail.com> (Braynex Services Ltd \u2014 https://www.braynexservices.com)",
   "homepage": "https://github.com/Braynexservices/nigeria-mcp",
   "repository": {
@@ -19,7 +19,15 @@
     "lanes/fx-rates",
     "lanes/trade-intel",
     "lanes/bank-account",
-    "lanes/electricity"
+    "lanes/electricity",
+    "lanes/grid3-boundaries",
+    "lanes/admin-divisions",
+    "lanes/health-facility",
+    "lanes/worldbank-macro",
+    "lanes/imf-weo",
+    "lanes/un-sdg",
+    "lanes/quidax-crypto",
+    "lanes/nigsac-sanctions"
   ],
   "scripts": {
     "build": "npm run build --workspaces --if-present",

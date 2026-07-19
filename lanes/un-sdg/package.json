@@ -1,0 +1,61 @@
+{
+  "name": "@braynexservices/nigeria-mcp-un-sdg",
+  "displayName": "Nigeria UN SDG MCP",
+  "version": "0.1.0",
+  "description": "Nigeria's UN Sustainable Development Goals indicators (poverty, under-5 mortality, electricity and water access, primary-school completion) as MCP tools. Backed by the UN SDG Global Database API, keyless.",
+  "homepage": "https://www.braynexservices.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/braynexservices/nigeria-mcp.git",
+    "directory": "lanes/un-sdg"
+  },
+  "bugs": {
+    "url": "https://github.com/braynexservices/nigeria-mcp/issues"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "nigeria",
+    "sdg",
+    "united-nations",
+    "development",
+    "poverty",
+    "statistics"
+  ],
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "NOTICE"
+  ],
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "prepack": "tsc",
+    "start:stdio": "tsx src/stdio.ts",
+    "smoke": "tsx scripts/smoke.ts",
+    "smoke:live": "tsx scripts/live.ts"
+  },
+  "dependencies": {
+    "@braynexservices/nigeria-mcp-core": "^0.3.0",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0"
+  },
+  "license": "MIT",
+  "author": "Samuel Orie <braynexservices@gmail.com> (Braynex Services Ltd — https://www.braynexservices.com)",
+  "engines": {
+    "node": ">=20"
+  },
+  "bin": {
+    "nigeria-mcp-un-sdg": "./dist/stdio.js"
+  },
+  "mcpName": "io.github.Braynexservices/nigeria-un-sdg"
+}

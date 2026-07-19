@@ -1,0 +1,61 @@
+{
+  "name": "@braynexservices/nigeria-mcp-worldbank-macro",
+  "displayName": "Nigeria World Bank Macro MCP",
+  "version": "0.1.0",
+  "description": "Nigerian macroeconomic indicators (GDP, inflation, population, remittances, FDI, unemployment) as MCP tools. Backed by the World Bank Indicators API, keyless.",
+  "homepage": "https://www.braynexservices.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/braynexservices/nigeria-mcp.git",
+    "directory": "lanes/worldbank-macro"
+  },
+  "bugs": {
+    "url": "https://github.com/braynexservices/nigeria-mcp/issues"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "nigeria",
+    "macroeconomics",
+    "gdp",
+    "world-bank",
+    "economy",
+    "indicators"
+  ],
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "NOTICE"
+  ],
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "prepack": "tsc",
+    "start:stdio": "tsx src/stdio.ts",
+    "smoke": "tsx scripts/smoke.ts",
+    "smoke:live": "tsx scripts/live.ts"
+  },
+  "dependencies": {
+    "@braynexservices/nigeria-mcp-core": "^0.3.0",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0"
+  },
+  "license": "MIT",
+  "author": "Samuel Orie <braynexservices@gmail.com> (Braynex Services Ltd — https://www.braynexservices.com)",
+  "engines": {
+    "node": ">=20"
+  },
+  "bin": {
+    "nigeria-mcp-worldbank-macro": "./dist/stdio.js"
+  },
+  "mcpName": "io.github.Braynexservices/nigeria-worldbank-macro"
+}

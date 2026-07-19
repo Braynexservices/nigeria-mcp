@@ -1,0 +1,62 @@
+{
+  "name": "@braynexservices/nigeria-mcp-grid3-boundaries",
+  "displayName": "Nigeria GRID3 Boundaries MCP",
+  "version": "0.1.0",
+  "description": "Nigeria administrative boundaries (state / LGA / ward) as MCP tools — centroid, bounding box, and reverse-geocoding a WGS84 point to its admin areas. Backed by GRID3 (CC BY 4.0), keyless.",
+  "homepage": "https://www.braynexservices.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/braynexservices/nigeria-mcp.git",
+    "directory": "lanes/grid3-boundaries"
+  },
+  "bugs": {
+    "url": "https://github.com/braynexservices/nigeria-mcp/issues"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "nigeria",
+    "boundaries",
+    "gis",
+    "grid3",
+    "admin-boundaries",
+    "geocoding",
+    "lga"
+  ],
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "NOTICE"
+  ],
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "prepack": "tsc",
+    "start:stdio": "tsx src/stdio.ts",
+    "smoke": "tsx scripts/smoke.ts",
+    "smoke:live": "tsx scripts/live.ts"
+  },
+  "dependencies": {
+    "@braynexservices/nigeria-mcp-core": "^0.3.0",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0"
+  },
+  "license": "MIT",
+  "author": "Samuel Orie <braynexservices@gmail.com> (Braynex Services Ltd — https://www.braynexservices.com)",
+  "engines": {
+    "node": ">=20"
+  },
+  "bin": {
+    "nigeria-mcp-grid3-boundaries": "./dist/stdio.js"
+  },
+  "mcpName": "io.github.Braynexservices/nigeria-grid3-boundaries"
+}
